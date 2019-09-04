@@ -1,5 +1,6 @@
+#!/usr/bin/env python3
 import json, requests
-import tokens
+import tokens_personal as tokens
 
 # Before running program install the requests library using `pip install requests`
 url = {
@@ -23,7 +24,7 @@ boardNames = [l['name'] for l in parse_json['lists']]
 boardPos = [l['pos'] for l in parse_json['lists']]
 boardDict = dict(zip(boardIds, boardNames))
 
-Creates new lists based on jsons files
+# Creates new lists based on jsons files
 for i in zip(boardIds, boardNames, boardPos):
 	params = {
 		"name": i[1],
