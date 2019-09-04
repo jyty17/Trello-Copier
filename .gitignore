@@ -1,0 +1,4 @@
+/__pycache__
+tokens personal.py
+*.pyc
+*.json
